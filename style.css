@@ -1,117 +1,408 @@
 * {
-    font-family: 'Oswald', sans-serif;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+  display: none;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.headerBar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  color: white;
+  height: 50px;
+}
+
+
+.uList-headerBar {
+  line-height: 45px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.uList-headerBar li:hover {
+  text-shadow: 0 0 15px white;
+}
+
+a {
+  color: white;
+  text-decoration-line: none;
+}
+
+a:visited {
+  color: white;
+}
+
+.defaultBox {
+  position: relative;
+  top: 15%;
+  right: 0;
+  left: 0;
+  margin: auto;
+
+  box-shadow: 0 0 10px -2px black;
+  border-radius: 4px;
+  width: 70%;
+  height: 70%;
+  min-width: 600px;
+  min-height: 350px;
+}
+
+/* inicio */
+
+#start {
+  height: 100vh;
+  width: 100%;
+}
+
+.profileArea1 {
+  background: #ea891b;
+  height: 50%;
+  width: 100%;
+}
+
+.profileArea2 {
+  background: white;
+  height: 50%;
+  width: 100%;
+}
+
+.profileCard {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  top: -150px;
+  width: 50%;
+  min-width: 450px;
+  height: 300px;
+  margin: auto;
+}
+
+.profilePicture {
+  height: 100%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.content-profileCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.txt-size3 {
+  color: white;
+  font-size: 35px;
+}
+
+.txt-size2 {
+  color: white;
+  font-size: 25px;
+}
+
+.txt-size1 {
+  color: #ea891b;
+  font-size: 20px;
+}
+
+/* sobreMim */
+
+#aboutMe {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./imagens/bg1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.aboutMeCard {
+  overflow-y: auto;
+  background-color: rgba(245, 245, 245, 0.880);
+  padding: 20px;
+  padding-top: 0px;
+  padding-bottom: 80px;
+  font-size: 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.aboutMeCard::-webkit-scrollbar {
+  background-color: whitesmoke;
+  border-radius: 4px;
+}
+
+.aboutMeCard::-webkit-scrollbar-thumb {
+  background-color: white;
+  border: solid 1px rgb(186, 186, 186);
+  border-radius: 4px;
+}
+
+p::before {
+  content: '';
+  margin-left: 15px;
+}
+
+/* habildades */
+
+#skills {
+  height: 100vh;
+  width: 100%;
+  background-color: #ea891b;
+}
+
+.skillsBox {
+  background-image: linear-gradient(to top left, #cc6d00, #4d0085);
+}
+
+.appCard {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 120px;
+  height: 120px;
+  margin-top: 50px;
+}
+
+.changeAreaApp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.arrow {
+  color: white;
+  font-size: 40px;
+  background: #ea891b;
+  width: 30px;
+  height: 30px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 5px -1px black;
+  margin-top: 105px;
+  /* cursor: pointer; */
+}
+
+.arrow:active {
+  background-color: white;
+  color: #ea891b;
+}
+
+.appIcon {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.appText ul {
+  color: white;
+  list-style: none;
+  display: grid;
+  grid-template: auto auto / auto auto auto;
+  justify-content: center;
+  gap: 30px;
+}
+
+.appText li::before {
+  content: '</>';
+  padding-right: 5px;
+}
+
+/* Projetos */
+
+#projects {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+
+  background-image: url(./imagens/bg2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+#projectBox {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 8%;
+  padding-right: 8%;
+  gap: 15px;
+}
+
+.projectCard {
+  width: 280px;
+  height: 320px;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 0 0 25px whitesmoke;
+}
+
+/* contato */
+
+#contact {
+  background-color: #161616;
+  padding-top: 40px;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+}
+
+.contact-txt {
+  margin: auto;
+  display: block;
+  width: 200px;
+  background-color: #4d0085;
+  border-bottom: solid 5px black;
+  font-size: 35px;
+}
+
+.img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+  /* background-color: white; */
+}
+
+.img:hover {
+  transform: scale(1.1);
+}
+
+.img img {
+  width: 100%;
+}
+
+.linkFlaticon {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background-color: black;
+  color: #363636;
+}
+
+/* ============================== */
+/* ============================== */
+/* ============================== */
+
+@media (max-width: 350px) {
+  .material-symbols-outlined{
+    display: block;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
   }
-  
+
   .headerBar {
     position: fixed;
     top: 0px;
-    width: 100%;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-    color: white;
+    width: 50px;
     height: 50px;
+    background-image: none;
+    color: rgba(0, 0, 0, 0.3);
   }
-  
-  
+
+
   .uList-headerBar {
+    display: none;
+    font-size: 10px;
     line-height: 45px;
     list-style: none;
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     justify-content: center;
     gap: 20px;
   }
-  
-  .uList-headerBar li:hover {
-    text-shadow: 0 0 15px white;
-  }
-  
-  a {
-    color: white;
-    text-decoration-line: none;
-  }
-  
-  a:visited {
-    color: white;
-  }
-  
+
   .defaultBox {
-    position: relative;
-    top: 15%;
-    right: 0;
-    left: 0;
-    margin: auto;
-  
-    box-shadow: 0 0 10px -2px black;
-    border-radius: 4px;
-    width: 70%;
-    height: 70%;
-    min-width: 600px;
-    min-height: 350px;
+    width: 85%;
+    min-width: 0px;
+    min-height: 0px;
   }
-  
+
   /* inicio */
-  
+
   #start {
     height: 100vh;
-    width: 100%;
   }
-  
+
   .profileArea1 {
     background: #ea891b;
-    height: 50%;
+    height: 70%;
     width: 100%;
   }
-  
+
   .profileArea2 {
     background: white;
-    height: 50%;
+    height: 30%;
     width: 100%;
   }
-  
+
   .profileCard {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column-reverse;
     text-align: center;
-    top: -150px;
-    width: 50%;
-    min-width: 450px;
-    height: 300px;
-    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    top: -190px;
+    width: 100%;
+    min-width: 0px;
   }
-  
+
   .profilePicture {
-    height: 100%;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    margin: auto;
+    height: 220px;
+    width: 220px;
+    margin-top: 70px;
   }
-  
-  .content-profileCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  
+
   .txt-size3 {
     color: white;
-    font-size: 35px;
+    font-size: 30px;
   }
-  
+
   .txt-size2 {
     color: white;
     font-size: 25px;
   }
-  
+
   .txt-size1 {
-    color: #ea891b;
+    color: white;
     font-size: 20px;
   }
-  
+
   /* sobreMim */
-  
+
+  h1{
+    margin-top: 15px;
+    font-size: 23px;
+    text-align: center;
+  }
+
+  p{
+    font-size: 16px;
+  }
+
   #aboutMe {
     width: 100%;
     height: 100vh;
@@ -120,7 +411,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
   }
-  
+
   .aboutMeCard {
     overflow-y: auto;
     background-color: rgba(245, 245, 245, 0.880);
@@ -128,175 +419,281 @@
     padding-top: 0px;
     padding-bottom: 80px;
     font-size: 1.2rem;
-  
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
   }
-  
+
   .aboutMeCard::-webkit-scrollbar {
     background-color: whitesmoke;
     border-radius: 4px;
   }
-  
+
   .aboutMeCard::-webkit-scrollbar-thumb {
     background-color: white;
     border: solid 1px rgb(186, 186, 186);
     border-radius: 4px;
   }
-  
+
   p::before {
     content: '';
     margin-left: 15px;
   }
-  
+
   /* habildades */
-  
+
   #skills {
     height: 100vh;
     width: 100%;
     background-color: #ea891b;
+    margin-top: -1px;
+    margin-bottom: -1px;
   }
-  
-  .skillsBox {
-    background-image: linear-gradient(to top left, #cc6d00, #4d0085);
-  }
-  
+
   .appCard {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 120px;
-    height: 120px;
-    margin-top: 50px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
   }
-  
+
   .changeAreaApp {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
-  
+
   .arrow {
-    color: white;
-    font-size: 40px;
-    background: #ea891b;
-    width: 30px;
-    height: 30px;
-    line-height: 18px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 5px -1px black;
-    margin-top: 105px;
-    /* cursor: pointer; */
+    margin-top: 65px;
   }
-  
-  .arrow:hover {
-    color: #ea891b;
-    background: white;
-    box-shadow: 0 0 5px -1px black;
-  }
-  
-  .arrow:active {
-    color: white;
-    background: #ea891b;
-    box-shadow: 0 0 5px -1px black;
-  }
-  
-  .appIcon {
-    margin-top: 20px;
-    width: 100%;
-  }
-  
+
   .appText ul {
-    color: white;
-    list-style: none;
     display: grid;
-    grid-template: auto auto / auto auto auto;
-    justify-content: center;
-    gap: 30px;
+    grid-template: auto auto auto / auto auto;
+    gap: 15px;
   }
-  
-  .appText li::before {
-    content: '</>';
-    padding-right: 5px;
-  }
-  
+
   /* Projetos */
-  
-  #projects {
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-  
-    background-image: url(./imagens/bg2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
+
+  #projects{
+    margin-bottom: -1px;
+    background-color: #ea891b;
   }
-  
+
   #projectBox {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    padding-left: 8%;
-    padding-right: 8%;
-    flex-wrap: wrap;
-    gap: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    flex-wrap: nowrap;
   }
-  
+
   .projectCard {
-    width: 280px;
-    height: 320px;
-    background-color: whitesmoke;
-    border-radius: 8px;
-  box-shadow: 0 0 25px whitesmoke;
+    width: 180px;
+    height: 200px;
   }
-  
+
   /* contato */
-  
-  #contact{
+
+  #contact {
     background-color: #161616;
     padding-top: 40px;
     width: 100%;
     height: 400px;
     text-align: center;
   }
-  
-  .contact-txt{
-    margin: auto;
+}
+
+
+@media (min-width: 350px) and (max-width: 650px) {
+  .material-symbols-outlined{
     display: block;
-    width: 200px;
-  background-color: #4d0085;
-  border-bottom: solid 5px black;
-  font-size: 35px;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
   }
-  
-  .img{
-    display: inline-block;
+
+  .headerBar {
+    position: fixed;
+    top: 0px;
     width: 50px;
     height: 50px;
-    margin: 15px;
-    /* background-color: white; */
+    background-image: none;
+    color: rgb(255, 0, 0);
   }
-  
-  .img:hover{
-    transform: scale(1.1);
+
+
+  .uList-headerBar {
+    display: none;
+    font-size: 10px;
+    line-height: 45px;
+    list-style: none;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
   }
-  
-  .img img{
-    width: 100%;
+
+  .defaultBox {
+    width: 85%;
+    min-width: 0px;
+    min-height: 0px;
   }
-  
-  .linkFlaticon{
-    width: 100%;
-    display: block;
+
+  /* inicio */
+
+  .profileArea1 {
+    height: 60%;
+  }
+
+  .profileArea2 {
+    height: 40%;
+  }
+
+  .profileCard {
+    flex-direction: column-reverse;
     text-align: center;
-    background-color: black;
-    color: #363636;
+    padding-left: 30px;
+    padding-right: 30px;
+    top: -175px;
+    width: 100%;
+    min-width: 0px;
   }
+
+  .profilePicture {
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    margin-top: 70px;
+  }
+
+  .txt-size3 {
+    color: white;
+    font-size: 30px;
+  }
+
+  .txt-size2 {
+    color: white;
+    font-size: 25px;
+  }
+
+  .txt-size1 {
+    color: white;
+    font-size: 20px;
+  }
+
+  /* sobreMim */
+
+  h1{
+    margin-top: 15px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  p{
+    font-size: 22px;
+  }
+
+  #aboutMe {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./imagens/bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  .aboutMeCard {
+    overflow-y: auto;
+    background-color: rgba(245, 245, 245, 0.880);
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 80px;
+    font-size: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .aboutMeCard::-webkit-scrollbar {
+    background-color: whitesmoke;
+    border-radius: 4px;
+  }
+
+  .aboutMeCard::-webkit-scrollbar-thumb {
+    background-color: white;
+    border: solid 1px rgb(186, 186, 186);
+    border-radius: 4px;
+  }
+
+  p::before {
+    content: '';
+    margin-left: 15px;
+  }
+
+  /* habildades */
+
+  #skills {
+    height: 100vh;
+    width: 100%;
+    background-color: #ea891b;
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
+
+  .appCard {
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+  }
+
+  .changeAreaApp {
+    margin-bottom: 50px;
+  }
+
+  .arrow {
+    margin-top: 65px;
+  }
+
+  .appText ul {
+    display: grid;
+    grid-template: auto auto auto / auto auto;
+    gap: 15px;
+    font-size: 20px;
+  }
+
+  /* Projetos */
+
+  #projects{
+    margin-bottom: -1px;
+    background-color: #ea891b;
+  }
+
+  #projectBox {
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 0;
+    padding-right: 0;
+    flex-wrap: nowrap;
+  }
+
+  .projectCard {
+    width: 180px;
+    height: 200px;
+  }
+
+  /* contato */
+
+  #contact {
+    background-color: #161616;
+    padding-top: 40px;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+  }
+}
