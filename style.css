@@ -8,23 +8,44 @@
 .material-symbols-outlined {
   display: none;
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
 
-.headerBar {
+#slider {
+display: none;
+}
+
+#headerBar-mob{
+  display: none;
+}
+
+#headerBar {
   position: fixed;
   top: 0px;
   width: 100%;
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   color: white;
+  backdrop-filter: blur(2px);
   height: 50px;
 }
 
+#menuIcon{
+  display: none;
+  cursor: pointer;
+}
 
-.uList-headerBar {
+#closeSliderBtn {
+  color: white;
+  float: right;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#uList-headerBar {
   line-height: 45px;
   list-style: none;
   display: flex;
@@ -33,7 +54,7 @@
   gap: 20px;
 }
 
-.uList-headerBar li:hover {
+#uList-headerBar li:hover{
   text-shadow: 0 0 15px white;
 }
 
@@ -68,19 +89,19 @@ a:visited {
   width: 100%;
 }
 
-.profileArea1 {
+#profileArea1 {
   background: #ea891b;
   height: 50%;
   width: 100%;
 }
 
-.profileArea2 {
+#profileArea2 {
   background: white;
   height: 50%;
   width: 100%;
 }
 
-.profileCard {
+#profileCard {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -93,12 +114,12 @@ a:visited {
   margin: auto;
 }
 
-.profilePicture {
+#profilePicture {
   height: 100%;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-.content-profileCard {
+#content-profileCard {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -135,7 +156,7 @@ a:visited {
   background-color: rgba(245, 245, 245, 0.880);
   padding: 20px;
   padding-top: 0px;
-  padding-bottom: 80px;
+  padding-bottom: 30px;
   font-size: 1.2rem;
 
   display: flex;
@@ -172,7 +193,7 @@ p::before {
   background-image: linear-gradient(to top left, #cc6d00, #4d0085);
 }
 
-.appCard {
+#appCard {
   margin-left: 10px;
   margin-right: 10px;
   width: 120px;
@@ -180,7 +201,7 @@ p::before {
   margin-top: 50px;
 }
 
-.changeAreaApp {
+#changeAreaApp {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -307,32 +328,59 @@ p::before {
 /* ============================== */
 
 @media (max-width: 350px) {
-  .material-symbols-outlined{
+  .material-symbols-outlined {
     display: block;
     font-size: 35px;
     line-height: 50px;
     text-align: center;
   }
 
-  .headerBar {
+  #slider{
+    display: none;
     position: fixed;
-    top: 0px;
-    width: 50px;
-    height: 50px;
-    background-image: none;
-    color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 50px;
+    background-color: rgba(0, 0, 0, 0.46);
+    width: 70%;
+    height: 100vh;
+    transition: 300ms;
+    box-shadow: 0 0 10px black;
+    backdrop-filter: blur(5px);
   }
 
+  #headerBar-mob{
+    display: block;
+position: fixed;
+top: 0;    
+  }
 
-  .uList-headerBar {
+  #menuIcon{
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  #headerBar {
+   display: none;
+  }
+
+  #uList-headerBar {
     display: none;
-    font-size: 10px;
-    line-height: 45px;
+  }
+
+  #uList-headerBar-mob {
     list-style: none;
-    /* display: flex; */
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #slider-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
   }
 
   .defaultBox {
@@ -347,19 +395,19 @@ p::before {
     height: 100vh;
   }
 
-  .profileArea1 {
+  #profileArea1 {
     background: #ea891b;
     height: 70%;
     width: 100%;
   }
 
-  .profileArea2 {
+  #profileArea2 {
     background: white;
     height: 30%;
     width: 100%;
   }
 
-  .profileCard {
+  #profileCard {
     flex-direction: column-reverse;
     text-align: center;
     padding-left: 30px;
@@ -369,7 +417,7 @@ p::before {
     min-width: 0px;
   }
 
-  .profilePicture {
+  #profilePicture {
     margin: auto;
     height: 220px;
     width: 220px;
@@ -393,13 +441,13 @@ p::before {
 
   /* sobreMim */
 
-  h1{
+  h1 {
     margin-top: 15px;
     font-size: 23px;
     text-align: center;
   }
 
-  p{
+  p {
     font-size: 16px;
   }
 
@@ -452,7 +500,7 @@ p::before {
     margin-bottom: -1px;
   }
 
-  .appCard {
+  #appCard {
     margin-left: 3px;
     margin-right: 3px;
     width: 100px;
@@ -460,7 +508,7 @@ p::before {
     margin-top: 10px;
   }
 
-  .changeAreaApp {
+  #changeAreaApp {
     margin-bottom: 50px;
   }
 
@@ -476,7 +524,7 @@ p::before {
 
   /* Projetos */
 
-  #projects{
+  #projects {
     margin-bottom: -1px;
     background-color: #ea891b;
   }
@@ -507,32 +555,60 @@ p::before {
 
 
 @media (min-width: 350px) and (max-width: 650px) {
-  .material-symbols-outlined{
+  .material-symbols-outlined {
     display: block;
     font-size: 35px;
     line-height: 50px;
     text-align: center;
   }
 
-  .headerBar {
+  #slider{
+    display: none;
     position: fixed;
-    top: 0px;
-    width: 50px;
-    height: 50px;
-    background-image: none;
-    color: rgb(255, 0, 0);
+    top: 0;
+    left: 50px;
+    background-color: rgba(0, 0, 0, 0.46);
+    width: 70%;
+    height: 100vh;
+    transition: 300ms;
+    box-shadow: 0 0 10px black;
+    backdrop-filter: blur(5px);
   }
 
+  #headerBar-mob{
+    display: block;
+position: fixed;
+top: 0;    
+  }
 
-  .uList-headerBar {
+  #menuIcon{
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  #headerBar {
+   display: none;
+  }
+
+  #uList-headerBar {
     display: none;
-    font-size: 10px;
-    line-height: 45px;
+  }
+
+  #uList-headerBar-mob {
     list-style: none;
-    /* display: flex; */
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #slider-container {
+    color: red;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
   }
 
   .defaultBox {
@@ -543,15 +619,15 @@ p::before {
 
   /* inicio */
 
-  .profileArea1 {
+  #profileArea1 {
     height: 60%;
   }
 
-  .profileArea2 {
+  #profileArea2 {
     height: 40%;
   }
 
-  .profileCard {
+  #profileCard {
     flex-direction: column-reverse;
     text-align: center;
     padding-left: 30px;
@@ -561,7 +637,7 @@ p::before {
     min-width: 0px;
   }
 
-  .profilePicture {
+  #profilePicture {
     margin: auto;
     height: 250px;
     width: 250px;
@@ -585,13 +661,13 @@ p::before {
 
   /* sobreMim */
 
-  h1{
+  h1 {
     margin-top: 15px;
     font-size: 30px;
     text-align: center;
   }
 
-  p{
+  p {
     font-size: 22px;
   }
 
@@ -644,7 +720,7 @@ p::before {
     margin-bottom: -1px;
   }
 
-  .appCard {
+  #appCard {
     margin-left: 3px;
     margin-right: 3px;
     width: 100px;
@@ -652,7 +728,7 @@ p::before {
     margin-top: 10px;
   }
 
-  .changeAreaApp {
+  #changeAreaApp {
     margin-bottom: 50px;
   }
 
@@ -669,7 +745,7 @@ p::before {
 
   /* Projetos */
 
-  #projects{
+  #projects {
     margin-bottom: -1px;
     background-color: #ea891b;
   }

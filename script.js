@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function start() {
-    // let appCard = document.getElementById('appCard');
+    document.getElementById('slider').style.display = 'block';
+    document.getElementById('slider').style.left = '-75%';
+    document.getElementById('menuIcon').addEventListener('click', openMenu);
+    document.getElementById('closeSliderBtn').addEventListener('click', closeMenu);
     let arrow = document.querySelectorAll('.arrow');
 
     let index = 0;
@@ -45,4 +48,22 @@ function changeApp(index) {
     apps[index].style.display = 'inline-block';
     txt[index].style.display = 'grid';
 
+}
+
+function openMenu(){
+    document.getElementById('menuIcon').style.display = 'none';
+    document.getElementById('slider').style.left = '0px';
+
+    const aMob = document.querySelectorAll('.aMob');
+aMob.forEach(a=>{
+    a.addEventListener('click', ()=>{
+        document.getElementById('slider').style.left = '-75%';
+        document.getElementById('menuIcon').style.display = 'block';
+    })
+})
+};
+
+function closeMenu(){
+    document.getElementById('slider').style.left = '-75%';
+    document.getElementById('menuIcon').style.display = 'block';
 }
