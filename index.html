@@ -23,6 +23,19 @@
 
 <body>
 
+    <header>
+        <div id="headerBar">
+            <ul id="uList-headerBar">
+                <li><a href="#start">Início</a></li>
+                <li><a href="#aboutMe">Sobre Mim</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+
+    </header>
+
     <main>
         <div id="start">
 
@@ -56,11 +69,14 @@
                     cheguei de paraquedas nessa área, pois nunca fui muito ligado
                     a tecnologia e sempre achei tudo isso muito complexo, sempre descartei a possibilidade
                     de estudar algo relacionado a tecnologia.
-                    Porém tudo isso mudou quando eu estava prestes a sair da escola e sem rumo, não havia nada que me interessasse.
+                    Porém tudo isso mudou quando eu estava prestes a sair da escola e sem rumo, não havia nada que me
+                    interessasse.
                     Foi aí que conheci realmente o que era o desenvolvimento web, comecei a pesquisar sobre
-                    profissões e estava aberto a novas oportunidades, ja que qualquer experiencia seria válida. Juntando isso, mais a notável popularidade
+                    profissões e estava aberto a novas oportunidades, ja que qualquer experiencia seria válida. Juntando
+                    isso, mais a notável popularidade
                     das áreas de tecnologia, decidi me aprofundar no que programação e comecei a ver uma possível
-                    oportunidade em algo jamais esperado por mim. Não perdi tempo e entrei com toda a determinação, comprei um notebook e um curso
+                    oportunidade em algo jamais esperado por mim. Não perdi tempo e entrei com toda a determinação,
+                    comprei um notebook e um curso
                     para dar meus primeiros passos.
                 </p>
                 <p>Com algumas semanas de curso comecei a entender um pouco mais sobre
@@ -93,8 +109,8 @@
                 <div class="showAreaApp">
                     <span class="appText">
                         <ul>
-                            <li>Tags Semânticas</li>
-                            <li>SEO</li>
+                            <li>Principais Tags Semânticas</li>
+                            <li>Básico de SEO</li>
                         </ul>
                     </span>
                     <span class="appText">
@@ -107,27 +123,24 @@
                     <span class="appText">
                         <ul>
                             <li>JSON</li>
-                            <li>API</li>
+                            <li>consumação de APIs</li>
+                            <li>Boa lógica</li>
                         </ul>
                     </span>
                     <span class="appText">
                         <ul>
-                            <li>Jquery</li>
-                            <li>Jquery</li>
-                            <li>Jquery</li>
+                            <li>Em estudos...</li>
                         </ul>
                     </span>
                     <span class="appText">
                         <ul>
-                            <li>React</li>
-                            <li>React</li>
-                            <li>React</li>
+                            <li>Em estudos...</li>
                         </ul>
                     </span>
                     <span class="appText">
                         <ul>
-                            <li>GIT</li>
-                            <li>GIT</li>
+                            <li>Conhecimento dos comandos</li>
+                            <li>Funcionalidades</li>
                             <li>GIT</li>
                         </ul>
                     </span>
@@ -136,21 +149,31 @@
 
         </div>
 
+        <!-- 1000x875 -->
+
         <div id="projects">
             <div id="projectBox">
-                <div class="projectCard"></div>
+                <div class="projectCard">
+                    <img class="projectCardImg"
+                            src="./imagens/scoreMarkerImg.png" alt="scoreMarker">
+                    <a href="./projetos/scoreMarker/index.html"><span class="projectCardTxt">Contador de pontos</span></a>
+                </div>
                 <div class="projectCard"></div>
                 <div class="projectCard"></div>
             </div>
         </div>
 
-        <footer>
-            <div id="contact">
+        
+    </main>
+    
+    <footer id="contact">
+        <div id="contact-position">
+            <div id="contact-links">
                 <span class="contact-txt">Veja mais em:</span>
                 <span class="img"><a href="https://github.com/FernandoRhenan?tab=repositories"><img
                             src="./icons/github.png" alt="github"></a></span>
-                <span class="img"><a href="https://www.linkedin.com/in/fernando-rhenan-weber-445ba4246"><img src="./icons/linkedin.png"
-                            alt="linkedin"></a></span>
+                <span class="img"><a href="https://www.linkedin.com/in/fernando-rhenan-weber-445ba4246"><img
+                            src="./icons/linkedin.png" alt="linkedin"></a></span>
             </div>
             <div>
                 <a class="linkFlaticon" href="https://www.flaticon.com/br/icones-gratis/github"
@@ -158,49 +181,31 @@
                 <a class="linkFlaticon" href="https://www.flaticon.com/br/icones-gratis/linkedin"
                     title="github ícones">Linkedin ícones criados por Pixel perfect - Flaticon</a>
             </div>
-        </footer>
-
-    </main>
-
-    <header>
-
-        <!-- Fazer um headerBar para o desk  e um para o mob -->
-        <div id="headerBar">
-            <ul id="uList-headerBar">
-                <li><a href="#start">Início</a></li>
-                <li><a href="#aboutMe">Sobre Mim</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
         </div>
+    </footer>
 
-        <div id="headerBar-mob">
-            <span id="menuIcon" class="material-symbols-outlined">
-                menu
+    <div id="headerBar-mob">
+        <span id="menuIcon" class="material-symbols-outlined">
+            menu
+        </span>
+    </div>
+
+    <div id="slider">
+        <div id="closeSliderBtn"><span class="material-symbols-outlined">
+                close
             </span>
         </div>
 
-        <div id="slider">
-            <div id="closeSliderBtn"><span class="material-symbols-outlined">
-                    close
-                </span>
-            </div>
-
-            <div id="slider-container">
-                <ul id="uList-headerBar-mob">
-                    <li><a class="aMob" href="#start">Início</a></li>
-                    <li><a class="aMob" href="#aboutMe">Sobre Mim</a></li>
-                    <li><a class="aMob" href="#skills">Habilidades</a></li>
-                    <li><a class="aMob" href="#projects">Projetos</a></li>
-                    <li><a class="aMob" href="#contact">Contato</a></li>
-                </ul>
-            </div>
+        <div id="slider-container">
+            <ul id="uList-headerBar-mob">
+                <li><a class="aMob" href="#start">Início</a></li>
+                <li><a class="aMob" href="#aboutMe">Sobre Mim</a></li>
+                <li><a class="aMob" href="#skills">Habilidades</a></li>
+                <li><a class="aMob" href="#projects">Projetos</a></li>
+                <li><a class="aMob" href="#contact">Contato</a></li>
+            </ul>
         </div>
-    </header>
-
-
-
+    </div>
 
     <script src="script.js"></script>
 </body>

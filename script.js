@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function start() {
-    document.getElementById('slider').style.display = 'block';
     document.getElementById('slider').style.left = '-75%';
     document.getElementById('menuIcon').addEventListener('click', openMenu);
     document.getElementById('closeSliderBtn').addEventListener('click', closeMenu);
@@ -50,20 +49,29 @@ function changeApp(index) {
 
 }
 
-function openMenu(){
-    document.getElementById('menuIcon').style.display = 'none';
-    document.getElementById('slider').style.left = '0px';
+function openMenu() {
+    document.getElementById('slider').style.display = 'block';
+
+    setTimeout(() => {
+        document.getElementById('menuIcon').style.display = 'none';
+        document.getElementById('slider').style.left = '0px';
+    }, 1);// Serve para não pular a animação quando o display fica 'block'
 
     const aMob = document.querySelectorAll('.aMob');
-aMob.forEach(a=>{
-    a.addEventListener('click', ()=>{
-        document.getElementById('slider').style.left = '-75%';
-        document.getElementById('menuIcon').style.display = 'block';
+    aMob.forEach(a => {
+        a.addEventListener('click', () => {
+            document.getElementById('slider').style.left = '-75%';
+            document.getElementById('menuIcon').style.display = 'block';
+            document.getElementById('slider-container').style.display = 'none';
+        })
     })
-})
 };
 
-function closeMenu(){
-    document.getElementById('slider').style.left = '-75%';
+function closeMenu() {
     document.getElementById('menuIcon').style.display = 'block';
+    document.getElementById('slider').style.left = '-75%';
+    
+    setTimeout(() => {
+        document.getElementById('slider').style.display = 'none';
+    }, 300);
 }

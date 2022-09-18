@@ -15,10 +15,10 @@
 }
 
 #slider {
-display: none;
+  display: none;
 }
 
-#headerBar-mob{
+#headerBar-mob {
   display: none;
 }
 
@@ -32,7 +32,7 @@ display: none;
   height: 50px;
 }
 
-#menuIcon{
+#menuIcon {
   display: none;
   cursor: pointer;
 }
@@ -54,7 +54,7 @@ display: none;
   gap: 20px;
 }
 
-#uList-headerBar li:hover{
+#uList-headerBar li:hover {
   text-shadow: 0 0 15px white;
 }
 
@@ -187,10 +187,12 @@ p::before {
   height: 100vh;
   width: 100%;
   background-color: #ea891b;
+  margin-top: -1px;
 }
 
 .skillsBox {
   background-image: linear-gradient(to top left, #cc6d00, #4d0085);
+  height: 60%;
 }
 
 #appCard {
@@ -251,8 +253,9 @@ p::before {
 
 #projects {
   width: 100%;
-  height: 100vh;
-  background-color: black;
+  height: 120vh;
+  background-color: #ea891b;
+  margin-top: -1px;
 
   background-image: url(./imagens/bg2.png);
   background-size: cover;
@@ -265,6 +268,7 @@ p::before {
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   padding-left: 8%;
@@ -272,22 +276,50 @@ p::before {
   gap: 15px;
 }
 
-.projectCard {
+.projectCardImg {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   width: 280px;
-  height: 320px;
-  background-color: whitesmoke;
-  border-radius: 8px;
-  box-shadow: 0 0 25px whitesmoke;
 }
+
+.projectCardTxt {
+  color: grey;
+  height: 100%;
+  line-height: 60px;
+  display: block;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.projectCardTxt:hover{
+  color: whitesmoke;
+}
+
+.projectCard {
+  min-width: 280px;
+  min-height: 320px;
+  background-color: #4d0085;
+  box-shadow: 0 0 15px -1px #4d0085;
+  border-radius: 8px;
+}
+
 
 /* contato */
 
 #contact {
+  display: block;
   background-color: #161616;
   padding-top: 40px;
   width: 100%;
-  height: 400px;
+  height: 100vh;
   text-align: center;
+  margin-top: -1px;
+}
+
+#contact-position {
+  position: relative;
+  top: calc(100% - 285px);
 }
 
 .contact-txt {
@@ -297,6 +329,11 @@ p::before {
   background-color: #4d0085;
   border-bottom: solid 5px black;
   font-size: 35px;
+}
+
+#contact-links {
+  padding-bottom: 100px;
+  background-color: #161616;
 }
 
 .img {
@@ -335,7 +372,7 @@ p::before {
     text-align: center;
   }
 
-  #slider{
+  #slider {
     display: none;
     position: fixed;
     top: 0;
@@ -348,13 +385,13 @@ p::before {
     backdrop-filter: blur(5px);
   }
 
-  #headerBar-mob{
+  #headerBar-mob {
     display: block;
-position: fixed;
-top: 0;    
+    position: fixed;
+    top: 0;
   }
 
-  #menuIcon{
+  #menuIcon {
     display: block;
     width: 50px;
     height: 50px;
@@ -362,7 +399,7 @@ top: 0;
   }
 
   #headerBar {
-   display: none;
+    display: none;
   }
 
   #uList-headerBar {
@@ -516,6 +553,12 @@ top: 0;
     margin-top: 65px;
   }
 
+  .showAreaApp{
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
+  }
+
   .appText ul {
     display: grid;
     grid-template: auto auto auto / auto auto;
@@ -537,9 +580,18 @@ top: 0;
     flex-wrap: nowrap;
   }
 
+  .projectCardImg {
+    width: 200px;
+  }
+  
+  .projectCardTxt {
+    line-height: 50px;
+    font-size: 25px;
+  }
+  
   .projectCard {
-    width: 180px;
-    height: 200px;
+    min-width: 200px;
+    min-height: 240px;
   }
 
   /* contato */
@@ -562,7 +614,7 @@ top: 0;
     text-align: center;
   }
 
-  #slider{
+  #slider {
     display: none;
     position: fixed;
     top: 0;
@@ -575,13 +627,13 @@ top: 0;
     backdrop-filter: blur(5px);
   }
 
-  #headerBar-mob{
+  #headerBar-mob {
     display: block;
-position: fixed;
-top: 0;    
+    position: fixed;
+    top: 0;
   }
 
-  #menuIcon{
+  #menuIcon {
     display: block;
     width: 50px;
     height: 50px;
@@ -589,7 +641,7 @@ top: 0;
   }
 
   #headerBar {
-   display: none;
+    display: none;
   }
 
   #uList-headerBar {
