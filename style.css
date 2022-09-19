@@ -784,6 +784,11 @@ p::before {
     margin-bottom: 50px;
   }
 
+  .showAreaApp{
+    margin: auto;
+    width: 90%;
+  }
+
   .arrow {
     margin-top: 65px;
   }
