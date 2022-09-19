@@ -59,11 +59,7 @@ function openMenu() {
 
     const aMob = document.querySelectorAll('.aMob');
     aMob.forEach(a => {
-        a.addEventListener('click', () => {
-            document.getElementById('slider').style.left = '-75%';
-            document.getElementById('menuIcon').style.display = 'block';
-            document.getElementById('slider-container').style.display = 'none';
-        })
+        a.addEventListener('click', closeMenu);
     })
 };
 
