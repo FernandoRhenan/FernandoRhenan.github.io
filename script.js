@@ -14,8 +14,8 @@ function start() {
     arrow[0].addEventListener('click', () => {
         index = index - 1;
         if (index < 0) {
-            index = 5
-        } else if (index > 5) {
+            index = 4
+        } else if (index > 4) {
             index = 0
         } else {
             index = index;
@@ -25,8 +25,8 @@ function start() {
     arrow[1].addEventListener('click', () => {
         index = index + 1;
         if (index < 0) {
-            index = 5
-        } else if (index > 5) {
+            index = 4
+        } else if (index > 4) {
             index = 0
         } else {
             index = index;
