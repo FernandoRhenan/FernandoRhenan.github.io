@@ -316,10 +316,10 @@ p::before {
 303549 */
 }
 
-.react-todo{
+.todo-react{
   text-align: center;
-  background-color: #00630f;
-  box-shadow: 0 0 15px -1px #007606;
+  background-color: #cbcbcb;
+  box-shadow: 0 0 15px -1px #cbcbcb;
 }
 
 
