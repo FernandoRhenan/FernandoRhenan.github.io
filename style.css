@@ -307,19 +307,11 @@ p::before {
   box-shadow: 0 0 15px -1px #4d0085;
 }
 
-.rareGold{
-  background-color: #303549;
-  box-shadow: 0 0 15px -1px #303549;
 
-  /* 15266b
-7284d0
-303549 */
-}
-
-.todo-react{
+.crud-react{
   text-align: center;
-  background-color: #cbcbcb;
-  box-shadow: 0 0 15px -1px #cbcbcb;
+  background-color: #a2dbfe;
+  box-shadow: 0 0 15px -1px #69b1ff;
 }
 
 
