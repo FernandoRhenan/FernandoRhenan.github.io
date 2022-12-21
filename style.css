@@ -314,6 +314,12 @@ p::before {
   box-shadow: 0 0 15px -1px #69b1ff;
 }
 
+.rareGold{
+  text-align: center;
+  background-color: #00012a;
+  box-shadow: 0 0 15px -1px #002144;
+}
+
 
 /* contato */
 
