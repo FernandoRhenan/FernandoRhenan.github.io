@@ -74,7 +74,6 @@ a:visited {
   left: 0;
   margin: auto;
 
-  box-shadow: 0 0 10px -2px black;
   border-radius: 4px;
   width: 70%;
   height: 70%;
@@ -152,8 +151,8 @@ a:visited {
 }
 
 .aboutMeCard {
+  background-color: #00000016;
   overflow-y: auto;
-  background-color: rgba(245, 245, 245, 0.880);
   padding: 20px;
   padding-top: 0px;
   padding-bottom: 30px;
@@ -166,13 +165,11 @@ a:visited {
 }
 
 .aboutMeCard::-webkit-scrollbar {
-  background-color: whitesmoke;
   border-radius: 4px;
 }
 
 .aboutMeCard::-webkit-scrollbar-thumb {
-  background-color: white;
-  border: solid 1px rgb(186, 186, 186);
+  border: solid 1px grey;
   border-radius: 4px;
 }
 
@@ -515,7 +512,6 @@ p::before {
 
   .aboutMeCard {
     overflow-y: auto;
-    background-color: rgba(245, 245, 245, 0.880);
     padding: 20px;
     padding-top: 0px;
     padding-bottom: 80px;
@@ -528,13 +524,11 @@ p::before {
   }
 
   .aboutMeCard::-webkit-scrollbar {
-    background-color: whitesmoke;
     border-radius: 4px;
   }
 
   .aboutMeCard::-webkit-scrollbar-thumb {
-    background-color: white;
-    border: solid 1px rgb(186, 186, 186);
+    border: solid 1px grey;
     border-radius: 4px;
   }
 
@@ -750,7 +744,6 @@ p::before {
 
   .aboutMeCard {
     overflow-y: auto;
-    background-color: rgba(245, 245, 245, 0.880);
     padding: 20px;
     padding-top: 0px;
     padding-bottom: 80px;
@@ -763,13 +756,11 @@ p::before {
   }
 
   .aboutMeCard::-webkit-scrollbar {
-    background-color: whitesmoke;
     border-radius: 4px;
   }
 
   .aboutMeCard::-webkit-scrollbar-thumb {
-    background-color: white;
-    border: solid 1px rgb(186, 186, 186);
+    border: solid 1px grey;
     border-radius: 4px;
   }
 
