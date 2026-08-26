@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nandobot — sistema de coleta e publicação automatizada de ofertas de e-commerce em grupos de WhatsApp."
+    />
+    <title>Nandobot — Fernando Weber</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="./index.html">Fernando Weber</a>
+      <nav>
+        <ul>
+          <li><a href="./index.html#work">Trabalho</a></li>
+          <li><a href="./index.html#about">Sobre</a></li>
+          <li><a href="./index.html#contact">Contato</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" type="button" aria-label="Toggle color theme">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
+
+    <main id="top" class="case">
+      <section class="hero">
+        <p class="eyebrow">Projeto — Open source</p>
+        <h1>Nandobot</h1>
+        <p class="lede">
+          Um sistema que coleta ofertas de e-commerce, organiza os produtos em
+          uma fila e publica tudo automaticamente em grupos de WhatsApp. Feito
+          para quem trabalha com marketing de afiliados e precisa postar dezenas
+          de ofertas por dia sem fazer isso na mão.
+        </p>
+        <p class="hero-actions">
+          <a
+            class="button"
+            href="https://github.com/FernandoRhenan/nandobot"
+            target="_blank"
+            >Ver no GitHub</a
+          >
+          <a class="link" href="https://radar-de-ofertas.com" target="_blank"
+            >Acessar o projeto</a
+          >
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Resumo</h2>
+        <ul class="facts">
+          <li>
+            <span>Papel</span>
+            <p>Fundador — Desenvolvimento e infraestrutura.</p>
+          </li>
+          <li>
+            <span>Stack</span>
+            <p>Typescript, NextJs, Python, Postgresql, Redis, Docker.</p>
+          </li>
+          <li>
+            <span>Status</span>
+            <p>Em produção, open source.</p>
+          </li>
+          <li>
+            <span>Início</span>
+            <p>Maio - 2026</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">O problema</h2>
+        <p>
+          Divulgar ofertas de afiliado é um trabalho repetitivo: encontrar o
+          produto, copiar o link, conferir o preço antigo, montar a mensagem,
+          escolher o grupo e postar — de novo, e de novo. Fazer isso manualmente
+          limita quantas ofertas dá para divulgar por dia e torna o trabalho
+          muito massante.
+        </p>
+        <p>
+          O Nandobot transforma esse fluxo em uma esteira: cola-se o link, o
+          sistema extrai os dados do produto e cuida da publicação no ritmo
+          certo.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Como funciona</h2>
+
+        <ol class="steps">
+          <li>
+            <div class="step-meta"><span class="step-index">01</span></div>
+            <div class="step-body">
+              <h3>Coleta</h3>
+              <p>
+                Os links entram em uma fila de scraping. Cada item passa pelos
+                estados <em>pending</em>, <em>processing</em> e <em>done</em>, e
+                o painel acompanha o progresso em tempo real — incluindo as
+                falhas. O scraper extrai nome, imagem, preço atual e preço
+                antigo do produto, e os cupons cadastrados ficam disponíveis
+                para serem aplicados na oferta.
+              </p>
+              <figure>
+                <a href="public/scraping.png" target="_blank">
+                  <img
+                    src="public/scraping.png"
+                    alt="Painel do scraper: formulário para adicionar links, lista de cupons, fila de scraping com status de cada URL e tabela de produtos concluídos com preço e preço antigo."
+                    width="1855"
+                    height="930"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>
+                  Fila de scraping e produtos concluídos, com os cupons e o
+                  próximo item da pipeline à esquerda.
+                </figcaption>
+              </figure>
+            </div>
+          </li>
+
+          <li>
+            <div class="step-meta"><span class="step-index">02</span></div>
+            <div class="step-body">
+              <h3>Publicação</h3>
+              <p>
+                Com os produtos prontos, escolhe-se o grupo de destino, o
+                intervalo entre as postagens e a ordem — sequencial ou
+                aleatória. O painel calcula quanto tempo a fila vai levar antes
+                de começar e mostra o status da conexão com o WhatsApp.
+              </p>
+              <figure>
+                <a href="public/publisher.png" target="_blank">
+                  <img
+                    src="public/publisher.png"
+                    alt="Painel do publisher: tabela de produtos selecionados para postagem e barra lateral com status do WhatsApp, grupos de destino, intervalo entre postagens e ordem dos posts."
+                    width="1855"
+                    height="930"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>
+                  Agendamento das postagens: grupo de destino, intervalo, ordem
+                  e a previsão de término da fila.
+                </figcaption>
+              </figure>
+            </div>
+          </li>
+
+          <li>
+            <div class="step-meta"><span class="step-index">03</span></div>
+            <div class="step-body">
+              <h3>Distribuição</h3>
+              <p>
+                As ofertas chegam aos grupos, e uma landing page pública recebe
+                quem quer entrar. Os grupos são segmentados por público, então o
+                visitante escolhe o que faz sentido para ele em vez de receber
+                tudo.
+              </p>
+              <figure>
+                <a href="public/landing.png" target="_blank">
+                  <img
+                    src="public/landing.png"
+                    alt="Landing page do Nandobot com a chamada 'Ofertas novas todos os dias' e dois grupos para escolher: Geral e For Men."
+                    width="1855"
+                    height="930"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>
+                  Página de entrada dos grupos, aberta ao público.
+                </figcaption>
+              </figure>
+            </div>
+          </li>
+
+          <li>
+            <div class="step-meta"><span class="step-index">04</span></div>
+            <div class="step-body">
+              <h3>Grupo</h3>
+              <p>
+                Tudo é postado de acordo com o programado pelo afiliado, o
+                sistema é bastante robusto e muito eficiente.
+              </p>
+              <figure>
+                <a href="public/grupo_radar.png" target="_blank">
+                  <img
+                    src="public/grupo_radar.png"
+                    alt="Grupo de Whatsapp com as ofertas postadas."
+                    width="1855"
+                    height="930"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>
+                  Grupo no Whatsapp mostrando as ofertas postadas de forma
+                  programática.
+                </figcaption>
+              </figure>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Decisões técnicas</h2>
+        <ul class="notes">
+          <li>
+            <h4>Usar Baileys como API para envio de mensagens no Whatsapp.</h4>
+            <p>
+              Isso foi implementado depois de tentar 3 formas diferentes de
+              conexão com o Whatsapp. Foi usado a Evolution Go, Evolution API e
+              o modulo whatsapp-web.js. Nenhum deles supriu a necessidade de
+              forma simples e consistente. Havia bugs e impedimentos para
+              implementa-los. O principal motivo de deixar de usa-los foi: A
+              infraestrutura complexa para algo simples. O Baileys se encaixou
+              muito bem a necessidade, não precisando alterar nada na
+              infraestrutura e sendo uma dependência simples, sem ficar à mercê
+              de outras APIs de terceiros.
+            </p>
+          </li>
+          <li>
+            <h4>Usar o Redis.</h4>
+            <p>
+              Surgiu a necessidade de usar Redis para armazenar a sessão do
+              Whatsapp que tem muito I/O de dados. O Redis, rodando localmente
+              dentro do servidor foi uma solução muito confiável e veloz. O
+              Redis também é usado como fila para os produtos que hão de ser
+              postados, pois armazenar uma fila que fica muitas horas até ser
+              concluída poderia ser uma inconsistencia, caso fosse feita em
+              memória diretamente no servidor Web. Isso porque o Redis tem um
+              sistema de manter os dados vivos, mesmo com uma queda do serviço.
+            </p>
+          </li>
+          <li>
+            <h4>
+              WebSocket para a transmissão do QR code na conexão com o Whatsapp.
+            </h4>
+            <p>
+              De primeiro momento, pode parecer 'overengineering' usar WebSocket
+              apenas para enviar o QRcode do Whatsapp de um lado para o outro.
+              Mas não é. O WebSocket é um protocolo muito simples, que serviu
+              perfeitamente para evitar 'gambiarras' no momento de fazer a
+              conexão com o Whatsapp. O WebSocket nesse caso simplesmente
+              repassa as mensagens que o servidor do Whatsapp envia para o
+              servidor, e então o servidor repassa para o cliente
+              (navegador/frontend) em tempo real, sem armazenar estado nem fazer
+              várias requisições HTTP checando se o QRcode mudou ou expirou.
+            </p>
+          </li>
+          <li>
+            <h4>Github Actions para DevOps.</h4>
+            <p>
+              O Github Actions é essencial para a implantação deste projeto,
+              pois o deploy de novas versões do código é completamente coberta
+              pelas pipelines do Actions, o que permite que em poucos minutos um
+              deploy de uma versão atualizada da aplicação chegue ao servidor.
+            </p>
+          </li>
+          <li>
+            <h4>Testes automatizados.</h4>
+            <p>
+              Eles são muito necessários para tentar fazer com que a aplicação
+              mantenha ao máximo a sua consistência. O código é refatorado e
+              mudado o tempo todo. Sem os testes o desenvolvimento seria como
+              andar num quarto desconhecido no escuro.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Aprendizados</h2>
+        <p>
+          Esse projeto foi muito importante para eu me aperfeiçoar no DevOps,
+          pois tudo o que se refere a infraestrutura, CI/CD, configurar um
+          servidor, configurar nginx e testes automatizados foi feito a mão, com
+          a ajuda das pesquisas em sites como o StackOverFlow e com a ajuda do
+          Claude Code, para fazer tarefas massantes ou repetitivas.
+        </p>
+        <p>
+          Me aperfeiçoei também no SQL, que foi utilizado de forma pura, sem
+          ORMs para auxiliar, e essa era justamente a ideia. Gosto de me
+          desafiar!
+        </p>
+        <p class="hero-actions">
+          <a class="button" href="./index.html#work">Voltar aos projetos</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Fernando Weber</p>
+      <p><a href="#top">Voltar ao topo</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

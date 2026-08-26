@@ -1,16 +1,189 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernando Weber</title>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="[One-line description of you and what you build]"
+    />
+    <title>Fernando Weber — Web Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-    <h1>Welcome to My Website</h1>
-    <p>This is a paragraph of text on my new site.</p>
-    
-    <!-- This is a comment. The browser will ignore it. -->
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top">Fernando Weber</a>
+      <nav>
+        <ul>
+          <li><a href="#work">Trabalho</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#education">Graduação</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" type="button" aria-label="Toggle color theme">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
 
-</body>
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">Desenvolvedor Web — Santa Catarina, Brasil</p>
+        <h1>Tentando fazer da web um lugar melhor.</h1>
+        <p class="lede">
+          Atuo como desenvolvedor Backend e adoto a cultura DevOps.
+        </p>
+        <p class="hero-actions">
+          <a class="button" href="#contact">Fale comigo</a>
+          <a class="link" href="#work">Veja o que eu faço</a>
+        </p>
+      </section>
+
+      <section id="work" class="section">
+        <h2 class="section-title">Trabalho</h2>
+
+        <ol class="project-list">
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-index">01</span>
+            </div>
+            <div class="project-body">
+              <h3><a href="./nandobot.html">Nandobot</a></h3>
+              <p>
+                Um projeto para afiliados de e-commerce, open source e rodando.
+              </p>
+              <ul class="tags">
+                <li>Typescript</li>
+                <li>NextJs</li>
+                <li>Docker</li>
+                <li>Postgresql</li>
+                <li>Redis</li>
+                <li>Python</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="about" class="section">
+        <h2 class="section-title">Sobre</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Sou formado em Análise e Desenvolvimento de Sistemas desde 2025
+              pela Estácio. Desde lá venho empreendendo e fazendo projetos
+              paralelos, constantemente evoluindo.
+            </p>
+            <p>
+              Gosto de desafios e não me contento em ficar na zona de conforto.
+            </p>
+            <p>
+              Trago versatilidade ao desenvolver e implantar. De fato acredito
+              que um bom programador deve estar ciente de todas as etapas de uma
+              entrega. Isso é essencial para o equilíbrio do sistema.
+            </p>
+          </div>
+          <div class="about-side">
+            <h4>Stack</h4>
+            <ul class="plain-list">
+              <li>Typescript / NodeJs</li>
+              <li>React / NextJs</li>
+              <li>Postgres</li>
+              <li>Redis</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>Github Actions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <h2 class="section-title">Formação</h2>
+        <ol class="project-list">
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-index">01</span>
+            </div>
+            <div class="project-body">
+              <h3>Análise e Desenvolvimento de Sistemas</h3>
+              <p>Estácio</p>
+              <ul class="tags">
+                <li>05-2023 → 10-2025</li>
+                <li>Nota geral: 8.62</li>
+              </ul>
+            </div>
+            <figure>
+              <a href="public/diploma.png" target="_blank">
+                <img src="./public/diploma.png" loading="lazy" />
+              </a>
+              <figcaption>Diploma universitário</figcaption>
+            </figure>
+          </li>
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-index">02</span>
+            </div>
+            <div class="project-body">
+              <h3>Curso de Redes - Básico</h3>
+              <p>Cisco Networking Academy</p>
+              <ul class="tags">
+                <li>05-2026</li>
+              </ul>
+            </div>
+            <figure>
+              <a
+                href="https://www.credly.com/badges/61dafdb2-c629-4b6b-afde-3ce85b304fd9/linked_in?t=tfczmu"
+                target="_blank"
+              >
+                <img src="./public/cisco_network_basics.png" loading="lazy" />
+              </a>
+              <figcaption>Certificado</figcaption>
+            </figure>
+          </li>
+        </ol>
+      </section>
+      <section id="contact" class="section">
+        <h2 class="section-title">Contato</h2>
+        <p class="lede">Venha conversar comigo, aqui estão meus contatos.</p>
+        <ul class="contact-list">
+          <li>
+            <span>Email</span
+            ><a
+              referrerpolicy="no-referrer"
+              target="_blank"
+              href="mailto:fernandorhenan9@gmail.com"
+              >fernandorhenan9@gmail.com</a
+            >
+          </li>
+          <li>
+            <span>GitHub</span
+            ><a
+              href="https://github.com/FernandoRhenan"
+              referrerpolicy="no-referrer"
+              target="_blank"
+              >github.com/FernandoRhenan</a
+            >
+          </li>
+          <li>
+            <span>LinkedIn</span
+            ><a
+              href="https://www.linkedin.com/in/fernando-rhenan-weber-445ba4246/"
+              referrerpolicy="no-referrer"
+              target="_blank"
+              >Fernando Weber</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Fernando Weber</p>
+      <p><a href="#top">Voltar ao topo</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
 </html>
