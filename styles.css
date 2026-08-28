@@ -179,12 +179,37 @@ main {
     padding: clamp(3rem, 8vw, 5rem) 0 0;
 }
 
+.hero-profile {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    margin-bottom: 1rem;
+}
+
+.hero-name {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    color: var(--muted);
+}
+
+.avatar {
+    display: block;
+    width: clamp(5rem, 14vw, 6.5rem);
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+}
+
 .eyebrow {
     font-family: var(--mono);
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     color: var(--muted);
-    margin-bottom: 1.5rem;
 }
 
 .hero h1 {
@@ -317,7 +342,7 @@ main {
     margin-bottom: 0.6rem;
 }
 
-.about-side h4 + .plain-list {
+.about-side h4+.plain-list {
     margin-bottom: 2rem;
 }
 
@@ -461,7 +486,7 @@ main {
 
 /* Steps ------------------------------------------------------- */
 
-.steps > li {
+.steps>li {
     display: grid;
     grid-template-columns: 6rem 1fr;
     gap: var(--gap);
@@ -559,7 +584,7 @@ figcaption {
         gap: 1.5rem;
     }
 
-    .steps > li {
+    .steps>li {
         grid-template-columns: 1fr;
         gap: 0.5rem;
     }
